@@ -1,0 +1,180 @@
+/* TODO: TYPOGRAPHY */
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:ital@0;1&family=Bellefair&display=swap');
+/* 
+'Barlow Condensed', sans-serif;
+'Bellefair', serif;
+*/
+/* ******************** */
+/* TODO: ROOT AND CUSTOM VARIABLES */
+
+/* ******************* */
+
+/* TODO: GENERAL STYLING */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+background: url('../starter-code/assets/home/background-home-desktop.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover; 
+    min-height: 100vh;
+    color:white;
+    overflow: hidden;
+}
+h1,h2,h3,h4{
+    font-family: 'Bellefair', serif;
+}
+h5{
+    font-family:  'Barlow Condensed', sans-serif;
+}
+
+P{
+    font-family: 'Barlow', sans-serif;
+}
+
+ ul li{
+     list-style-type: none;
+ }
+ a{
+     text-decoration: none;
+     color: white;
+ }
+
+ img{
+     max-width: 100%;
+ }
+
+/* ************************** */
+/* TODO: HEADER */
+.hamburger{
+    cursor:pointer;
+    display: none;
+    transition: all 0.3s ease-in-out;
+    font-size: 4em;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin-top:30px;
+   /* border:2px solid blue; */
+}
+
+header .logo{
+    width:20vw;
+    margin:auto 25px;
+}
+
+header nav{
+    width:70vw;
+}
+nav{
+    /* width: 50vw; */
+    /* max-width:70vw; */
+    background-color: rgba(255, 255, 255, 0.04);
+    backdrop-filter:blur(81.5485px) ;
+    min-height: 100%;
+    color: black ;
+    max-width: 1385px;
+    height: 80px;
+    padding: 0 100px 0 50px;
+   transition: all 0.3s ease-in-out;
+
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+nav ul li {
+    display: flex;
+    height: 100%;
+}
+nav ul li a span{
+    margin-right: 0.25em;
+}
+
+nav ul li a{
+    display: flex;
+    align-items: center;
+    margin:auto 0;
+      height: 100%;
+      vertical-align: center;
+}
+
+a.active{
+   border-bottom: 4px solid white;
+}
+
+a:hover, a:active{
+    transition: all 0.3s ease-in-out;
+    border-bottom: 2px solid white;
+}
+/* **************** */
+
+/* TODO: MEDIA QUERIES */
+
+@media (max-width: 768px) {
+    nav ul li a span{
+        display: none;
+    }
+  }
+  
+
+@media (max-width: 700px) {
+
+    .hamburger{
+        display: block;
+        z-index: 2;
+        position: absolute;
+        right:75px;
+        transform: scale(1.2);
+       
+           }
+    .burgerActive{
+               display: block;
+       }
+    nav ul li a span{
+               display: block;
+           }
+    header  nav{
+           display: none;
+           width:60vw;
+           max-width: 1385px;
+           padding: 50px 100px;
+          height: 90vh;
+          position: absolute;
+          right: 0;
+          top:0;
+       }
+       
+    header   nav ul{
+           display: flex;
+           justify-content: space-between;
+           height: 100%;
+           width: 100%;
+           flex-direction: column;
+    
+           height: 50%;
+
+       }
+       
+     header  nav ul li {
+           display: flex;
+           height: 30%;
+
+       }
+       
+      header nav ul li a{
+           display: flex;
+           align-items: center;
+           margin:auto 0;
+             height: 100%;
+             vertical-align: center;
+       }
+}

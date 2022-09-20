@@ -1,0 +1,140 @@
+body{
+    background-image: url('../starter-code/assets/technology/background-technology-desktop.jpg');
+}
+
+main{
+    margin-top: 3em;
+    height: 450px;
+    /* border: 1px solid; */
+    display: flex;
+}
+
+
+.main-left{
+    justify-content: space-around;
+    width:62.5%;
+    display: flex;
+    align-items: center;
+}
+
+.main-right{
+    text-align: center;
+    width: 37.5%;
+}
+
+.main-right div{
+    height: 100%;
+}
+.main-right img{
+    height:100%;
+}
+
+.main-left-content {
+    width:70%;
+    align-self: stretch;
+    /* border:1px solid; */
+}
+ .main-left-content > h3{
+     margin-bottom: 3em;
+    font-size: 22;
+    position: relative;
+    right: 70px;
+    bottom: 15px;
+
+}
+
+.main-left-content > h3 span{margin-right: 0.5em; }
+
+
+.main-left-content div h3{
+    font-size:28px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.main-left-content div p{
+    width:80%;
+    line-height: 1.5;
+    margin-top: 2em;
+}
+
+.main-left-content div h2{
+    font-size:45px;
+    text-transform: uppercase;
+}
+
+.stacks{
+    /* border: 1px solid; */
+    width: fit-content;
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+}
+
+.stacks > *{
+    padding: auto;
+    margin-bottom: 2em;
+    text-align: center;
+    vertical-align: center;
+    line-height: 50px;
+    width:50px;
+    height:50px;
+    display: inline-block;
+    background-color: none;
+    opacity: 0.3;
+    color:white;
+    border-radius: 100%;
+    border:1px solid whitesmoke;
+  position: relative;
+  cursor:pointer;
+}
+
+.stack-active{
+    color:black;
+    background-color: white;
+    opacity: 1;
+}
+
+@media (max-width: 780px) {
+
+    body{
+        overflow-y: scroll;
+    }
+    main{
+        margin-top: 10em !important;
+        flex-direction: column-reverse;
+        width: 100vw;
+
+    }
+   .main-left .stacks{
+        /* border: 2px solid red; */
+        width: fit-content;
+        margin-top: 1em;
+        flex-direction: row;
+    }
+
+   .main-left .stacks span{
+ margin-right: 3em;   
+}
+
+    main > *{
+        width:100% !important;
+    }
+
+    .main-left{
+        text-align: center;
+        flex-direction: column;
+    }
+    .main-left > *{
+        text-align: center;
+        width:100%;
+      flex-direction: row;
+        /* border:1px solid; */
+    }
+    .main-left-content div p{
+        width:80%;
+        /* border:1px solid red; */
+        margin: 1em auto;
+    }
+    
+}

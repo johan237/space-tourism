@@ -1,0 +1,90 @@
+/* TODO: BODY */
+body{
+background: url('../starter-code/assets/home/background-home-desktop.jpg');
+}
+/* TODO: MAIN CONTENT */
+
+main{
+    /* border:4px solid black; */
+    margin-top:5em;
+    display: flex;
+     justify-content: center;
+     align-items: flex-end;
+    text-align: center;
+    height:300px;
+    margin-bottom: 5em;
+
+}
+
+main .main-content{
+    width: 30%;
+    margin-left: 2em;
+    /* border:2px solid red; */
+}
+
+main .main-content h2{
+margin:1rem 0;
+}
+
+main .main-content p{
+ font-weight: normal;
+    text-align: justify;
+}
+
+main .action{
+    width: 40%;
+     height: 100%;
+     display: flex;
+     align-items:center ;
+     justify-content: center;
+}
+main .action div{
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+main .action div:hover{
+    width:250px;
+    height:250px;
+    backdrop-filter:blur(81.5485px) ;
+ border:50px solid rgba(255, 255, 255, 0.5);
+ transition: all 0.3s ease-in-out;
+}
+
+
+/* ****************** */
+
+/* TODO: MEDIA QUERIES */
+
+@media (max-width: 768px) {
+  nav ul li a span{
+      display: none;
+  }
+    main{
+        margin-top:7em;
+        flex-direction: column;
+    
+    }   
+    main .main-content{
+        width: 80%;
+        margin: auto;
+        margin-bottom: 1em;
+
+    }   
+    main .main-content p{
+     text-align: center;    
+    }
+    
+    main .action{
+         margin-top: 2em;
+        width: 100%;
+    } 
+}
+
